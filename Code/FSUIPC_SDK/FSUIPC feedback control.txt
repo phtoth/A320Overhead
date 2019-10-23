@@ -1,0 +1,173 @@
+FSUIPC Autopilot feedback control facility
+==========================================
+
+FOR PROGRAMMERS!
+
+Offsets 0700 - 0717 = Pitch control by elevator and/or elevator trim
+Offsets 0718 - 072f = Bank control by aileron
+Offsets 0730 - 0747 = KIAS/GS control by throttle(s)
+Offsets 0748 - 075F = Mach control by throttle(s)
+
+The latter two are mutually exclusive -- if both are enabled only KIAS
+operates, the other is switched off.
+
+Each of these blocks of 24 bytes are used as follows:
+ 
+
+0-7        Double target pitch or bank, in degrees, speed in knots or Mach
+
+
+8          Switch to enable the control loop.
+
+This is 0 for "off", non-zero for "on".
+
+ 
+9            Flags:
+
+2^0 = 1     No trim-out. This is only applicable to pitch control,
+
+By default FSUIPC will control the pitch using the elevator, but then, when
+very close (less divergence than your original minimum), it will trim out
+the elevator divergence. This is more or less what a pilot would do and seems
+to be the way the real aircraft work too, as far as we've determined. 
+
+However, if you do not want this transfer of offset to the trim, set this
+flag.
+
+2^1 = 1     Trim only: again, this is only applicable to pitch control.
+
+Normally FSUIPC will control the pitch by elevator adjustments. If this flag
+is set it will use the trim only.
+
+Note that the flags are independent -- even if the trim is used for control,
+any user-set or remaining deviation on the elevator can also be trimmed out
+when the pitch is closely achieved.
+
+2^2 = 1     Speed and Mach control only: use EPR for engine limits instead
+of N1% (see below).
+
+2^3 = 1	    Speed control only: use ground speed, not indicated air speed
+
+
+10-19    Factors used in the feedback loop calculations.
+These are 5 16-bit values, as follows:
+ 
+     10-11 value L
+             = unsigned low difference, in
+             degrees/knots/machhundredths * 256
+            128 == 0.5 degrees default for pitch and bank
+            51 == 0.2 knots for speed
+            10 == 0.0004 mach (.04 1/100ths)
+     12-13 value H
+            = unsigned high difference,
+            in degrees/knots/machhundredths * 256
+            2560 == 10.0 degrees default for pitch and bank
+            7680 == 30 knots for speed
+            1792 == 0.07 mach ( 7 1/100ths)
+     14-15 value R
+            = signed max rate of change to attempt,
+            in degrees/knots/machhundredths * 256 per sec
+            307 == 1.2 degrees per sec default for pitch and bank
+            589 == 2.3 knots per sec default for speed
+            256 == 0.01 mach per sec (1 1/100th)
+                     (The sign allows reversal if needed)
+     16-17 value Fh
+            = signed high fiddle factor, scalar * 256
+            25600 = 100 default for pitch and bank
+            7600 = 29.7 default for speed and mach
+     17-18 value Fl
+            = signed low fiddle factor, scalar * 256
+            12800 = 50 default for pitch and bank
+            3600 = 14.8 default for speed and mach
+
+
+Note that you can change these at any time, but the change does not become
+effective until you next enable the feedback control after it has been turned
+off (and seen to be turned off). This is because FSUIPC builds a lookup table
+from these values, it doesn't use them directly.
+
+New values will also be applied after FS has been paused, put into slew mode,
+or entered menus or modal dialogues. This is because all the feedback
+operations are suspended during these times (to prevent absurd runaway
+changes) and this is effectively achieved in the same way as you turning the
+operations off and on again.
+
+20-21     Parameter 1:
+22-23     Parameter 2
+
+The use of these depends on the control:
+
+For pitch and bank, Parameter 1 is the maximum change to the FS control in any
+one "tick". Default is 512 (out of the range of -16383 to +16383 provided by
+the control). The pitch and bank loops operate at FS's tick rate of 18/sec
+(approx), so this limits the change to 9216/sec.
+
+For pitch only, parameter 2 is the amount of trim to transfer per tick when
+"trimming out", unless this is prohibited by the option flag 2^0. By default
+this is 32 -- i.e. 576 per second. This will help applications in achieving
+realistic trim wheel movements -- I suspect there's a limit to how fast they
+really spin. Certainly the PFC motorised trim wheel will be regulated (but I
+don't know its speed yet).
+
+For speed and mach control, Parameter 1 gives the maximum engine setting and
+Parameter 2 gives the minimum. This, by default, is the N1% value, in exactly
+the same units as provided by FSUIPC (e.g. offset 0898 for Engine 1). For
+props this will relate to the RPM of course. The defaults are 90% (value
+14745) and 20% (3276) respectively.
+
+If you want the limits in terms of EPR, set the flag 2^2 and replace these
+limits by ones in the same units as the FSUIPC supplied EPR (e.g. offset 08BC
+for engine 1). Note that FS does not provide EPR for props nor for all jets.
+
+FSUIPC controls each engine separately within the same limits, but using the
+same throttle changes for each, calculated in the same way. It only operates
+throttles for engines which exist and which are flagged as "combusting"
+(e.g. FSUIPC offset 0894 for Engine 1).
+
+Note that changes to the target, the switch, the flags, and Parameters 1
+and 2, can be made at any time and are effective immediately, unlike the
+factors themselves. The feedback loop is roughly 18 times per second for
+all controls.
+
+The actual target rates are calculated from the difference in target value and
+current value, using rates of change, and using the variables detailed above.
+
+The pitch and bank system seems to work quite well. There are frequent little
+trim changes, but maybe these are realistic (time to watch some cockpit videos
+I think! <G>).
+
+The speed control needs tuning for most aircraft, especially the Mach one. The
+"fiddle factors" are just my "guesses" and need refining. The mach minimum and
+maximum and the max rate are also my initial guesses.
+
+
+There are testing facilities, so you can play with those. Just go to the Keys
+or Buttons page. You can assign key presses or buttons to the following extra
+controls:
+
+Fsuipc bank hold off
+Fsuipc bank hold on
+Fsuipc bank hold set
+Fsuipc bank hold toggle
+Fsuipc mach hold off
+Fsuipc mach hold on
+Fsuipc mach hold set
+Fsuipc mach hold toggle
+Fsuipc pitch hold off
+Fsuipc pitch hold on
+Fsuipc pitch hold set
+Fsuipc pitch hold toggle
+Fsuipc speed hold off
+Fsuipc speed hold on
+Fsuipc speed hold set
+Fsuipc speed hold toggle
+
+These should be self-explanatory. For the "Set" ones, put the value to
+be set as the parameter -- only whole numbers, but okay for testing
+(degrees, knots, or 100 x mach). For the "on" and "toggle" controls the
+current pitch/bank.speed or mach becomes the target to maintain.
+
+
+=========================================
+Pete Dowson, June 2008
+=========================================
