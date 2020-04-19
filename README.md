@@ -12,3 +12,6 @@ Estrutura dos arquivos:
       - Light - Sistema de Iluminação do A320O
           - Cut - Arquivo com os fontes para o corte a laser do painel
           - Draw - Arquivos para a pintura / gravação dos textos e setas
+      - AirCond - Sistema de Ar Condicionado do A320O
+          - Cut - Arquivo com os fontes para o corte a laser do painel
+          - Draw - Arquivos para a pintura / gravação dos textos e setas
