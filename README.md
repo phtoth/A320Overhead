@@ -24,3 +24,16 @@ Estrutura dos arquivos:
       - Fire - Sistema Supressão de Incêndio do A320
           - Cut - Arquivo com os fontes para o corte a laser do painel
           - Draw - Arquivos para a pintura / gravação dos textos e setas
+      - Left Panel - Painel do Lado esquerdo
+          - L_Blank - Painel em Branco para preencher espaço vazio
+                - Cut - Arquivo com os fontes para o corte a laser do painel
+          - L_Cargo_Smoke - Sistema de supressão de incêndio no galpão de cargas e outros sistemas
+                - Cut - Arquivo com os fontes para o corte a laser do painel
+                - Draw - Arquivos para a pintura / gravação dos textos e setas
+          - L_FLT_CTL - Sistema de Flight Control
+                - Cut - Arquivo com os fontes para o corte a laser do painel
+                - Draw - Arquivos para a pintura / gravação dos textos e setas
+          - L_Radio_01_Blank - Sistema Rádio 01 - TODO
+                - Cut - Arquivo com os fontes para o corte a laser do painel
+          - L_Radio_02_Blank - Sistema Rádio 02 - TODO
+                - Cut - Arquivo com os fontes para o corte a laser do painel
