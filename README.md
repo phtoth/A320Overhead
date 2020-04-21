@@ -18,3 +18,9 @@ Estrutura dos arquivos:
       - Elec - Sistema Elétrico do A320
           - Cut - Arquivo com os fontes para o corte a laser do painel
           - Draw - Arquivos para a pintura / gravação dos textos e setas
+      - Hyd_Fuel - Sistema Hidráulico e de Combustível do A320
+          - Cut - Arquivo com os fontes para o corte a laser do painel
+          - Draw - Arquivos para a pintura / gravação dos textos e setas
+      - Fire - Sistema Supressão de Incêndio do A320
+          - Cut - Arquivo com os fontes para o corte a laser do painel
+          - Draw - Arquivos para a pintura / gravação dos textos e setas
