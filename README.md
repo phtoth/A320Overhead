@@ -7,7 +7,14 @@ Mudanças - 12/04/2020
 
 
 Estrutura dos arquivos:
-
+ - A320 AutoCAD Project - Projeto original do AutoCAD que está sendo modificado
+ - Buttons - Projeto 3D dos botões dos painéis
+      - Korry - Botões no estilo Korry
+          - Regular - Botões expostos, sem a proteção de acionamento
+              - Horizontal - Apoio de fixação na horizontal do botão
+              - Vertical - Apoio de fixação da vertical do botão
+ - Images that Help - Alguns prints para ajudar na montagem do projeto
+ - old - Coisas do projeto antigo       
  - Panels - Diretório onde ficam os arquivos dos painéis
       - Light - Sistema de Iluminação do A320
           - Cut - Arquivo com os fontes para o corte a laser do painel
@@ -37,3 +44,4 @@ Estrutura dos arquivos:
                 - Cut - Arquivo com os fontes para o corte a laser do painel
           - L_Radio_02_Blank - Sistema Rádio 02 - TODO
                 - Cut - Arquivo com os fontes para o corte a laser do painel
+  - README.md - Este arquivo :-)
