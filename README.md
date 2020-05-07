@@ -13,6 +13,7 @@ Estrutura dos arquivos:
           - Regular - Botões expostos, sem a proteção de acionamento
               - Horizontal - Apoio de fixação na horizontal do botão
               - Vertical - Apoio de fixação da vertical do botão
+          - Stickers - Arquivos com os textos que ficam nos botões
  - Images that Help - Alguns prints para ajudar na montagem do projeto
  - old - Coisas do projeto antigo       
  - Panels - Diretório onde ficam os arquivos dos painéis
