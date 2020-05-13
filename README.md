@@ -14,6 +14,7 @@ Estrutura dos arquivos:
               - Horizontal - Apoio de fixação na horizontal do botão
               - Vertical - Apoio de fixação da vertical do botão
           - Stickers - Arquivos com os textos que ficam nos botões
+      - Button List.xlsx - Uma Lista com todos os botões do projeto
  - Images that Help - Alguns prints para ajudar na montagem do projeto
  - old - Coisas do projeto antigo       
  - Panels - Diretório onde ficam os arquivos dos painéis
