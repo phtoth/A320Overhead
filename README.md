@@ -15,6 +15,8 @@ Estrutura dos arquivos:
               - Vertical - Apoio de fixação da vertical do botão
           - Stickers - Arquivos com os textos que ficam nos botões
       - Button List.xlsx - Uma Lista com todos os botões do projeto
+ - Eletronics - Arquivos com projetos e esquemeas eletricos e eletrônicos
+      - Korry_Circuit - Circuitos que vão ficar atrás dos Korry Buttons
  - Images that Help - Alguns prints para ajudar na montagem do projeto
  - old - Coisas do projeto antigo       
  - Panels - Diretório onde ficam os arquivos dos painéis
