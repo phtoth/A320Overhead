@@ -35,19 +35,35 @@ Estrutura dos arquivos:
       - Fire - Sistema Supressão de Incêndio do A320
           - Cut - Arquivo com os fontes para o corte a laser do painel
           - Draw - Arquivos para a pintura / gravação dos textos e setas
-      - Left Panel - Painel do Lado esquerdo
-          - L_Blank - Painel em Branco para preencher espaço vazio
+      - Extra Size - Paineis do meio e Laterais para um tamanho extra no Overhead.
+          - Cut - Arquivo com os fontes para o corte a laser do painel
+      - Right Panel - Painel do Lado direito
+          - R_Blank - Painel em Branco para preencher espaço vazio
                 - Cut - Arquivo com os fontes para o corte a laser do painel
-          - L_Cargo_Smoke - Sistema de supressão de incêndio no galpão de cargas e outros sistemas
+          - R_Cargo_Smoke - Sistema de supressão de incêndio no galpão de cargas e outros sistemas
                 - Cut - Arquivo com os fontes para o corte a laser do painel
                 - Draw - Arquivos para a pintura / gravação dos textos e setas
-          - L_FLT_CTL - Sistema de Flight Control
+          - R_FLT_CTL - Sistema de Flight Control
                 - Cut - Arquivo com os fontes para o corte a laser do painel
                 - Draw - Arquivos para a pintura / gravação dos textos e setas
-          - L_Radio_01_Blank - Sistema Rádio 01 - TODO
+          - R_Radio_01_Blank - Sistema Rádio 01 - TODO
                 - Cut - Arquivo com os fontes para o corte a laser do painel
-          - L_Radio_02_Blank - Sistema Rádio 02 - TODO
+          - R_Radio_02_Blank - Sistema Rádio 02 - TODO
                 - Cut - Arquivo com os fontes para o corte a laser do painel
+          - Left Panel - Painel do Lado esquerdo
+              - L_ADIRS - Sistema de Navegação Inercial
+                    - Cut - Arquivo com os fontes para o corte a laser do painel
+                    - Draw - Arquivos para a pintura / gravação dos textos e setas
+              - L_BAT - Painel onde fica a Luz ON BAT do Adirs
+                    - Cut - Arquivo com os fontes para o corte a laser do painel
+              - L_Blank - Painel em Branco para preencher espaço vazio
+                    - Cut - Arquivo com os fontes para o corte a laser do painel
+              - L_EVAC - Sistema de Emergência do avião
+                    - Cut - Arquivo com os fontes para o corte a laser do painel
+                    - Draw - Arquivos para a pintura / gravação dos textos e setas
+              - L_FLT_CTL - Sistema de Flight Control
+                    - Cut - Arquivo com os fontes para o corte a laser do painel
+                    - Draw - Arquivos para a pintura / gravação dos textos e setas
   - README.md - Este arquivo :-)
 
 
