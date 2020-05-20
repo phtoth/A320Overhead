@@ -14,6 +14,7 @@ Estrutura dos arquivos:
               - Horizontal - Apoio de fixação na horizontal do botão
               - Vertical - Apoio de fixação da vertical do botão
           - Stickers - Arquivos com os textos que ficam nos botões
+          - Korry_Protected_Base - Base para segurar a capa de proteção do Korry
       - Button List.xlsx - Uma Lista com todos os botões do projeto
  - Eletronics - Arquivos com projetos e esquemeas eletricos e eletrônicos
       - Korry_Circuit - Circuitos que vão ficar atrás dos Korry Buttons
@@ -50,20 +51,20 @@ Estrutura dos arquivos:
                 - Cut - Arquivo com os fontes para o corte a laser do painel
           - R_Radio_02_Blank - Sistema Rádio 02 - TODO
                 - Cut - Arquivo com os fontes para o corte a laser do painel
-          - Left Panel - Painel do Lado esquerdo
-              - L_ADIRS - Sistema de Navegação Inercial
-                    - Cut - Arquivo com os fontes para o corte a laser do painel
-                    - Draw - Arquivos para a pintura / gravação dos textos e setas
-              - L_BAT - Painel onde fica a Luz ON BAT do Adirs
-                    - Cut - Arquivo com os fontes para o corte a laser do painel
-              - L_Blank - Painel em Branco para preencher espaço vazio
-                    - Cut - Arquivo com os fontes para o corte a laser do painel
-              - L_EVAC - Sistema de Emergência do avião
-                    - Cut - Arquivo com os fontes para o corte a laser do painel
-                    - Draw - Arquivos para a pintura / gravação dos textos e setas
-              - L_FLT_CTL - Sistema de Flight Control
-                    - Cut - Arquivo com os fontes para o corte a laser do painel
-                    - Draw - Arquivos para a pintura / gravação dos textos e setas
+      - Left Panel - Painel do Lado esquerdo
+          - L_ADIRS - Sistema de Navegação Inercial
+                - Cut - Arquivo com os fontes para o corte a laser do painel
+                - Draw - Arquivos para a pintura / gravação dos textos e setas
+          - L_BAT - Painel onde fica a Luz ON BAT do Adirs
+                - Cut - Arquivo com os fontes para o corte a laser do painel
+          - L_Blank - Painel em Branco para preencher espaço vazio
+                - Cut - Arquivo com os fontes para o corte a laser do painel
+          - L_EVAC - Sistema de Emergência do avião
+                - Cut - Arquivo com os fontes para o corte a laser do painel
+                - Draw - Arquivos para a pintura / gravação dos textos e setas
+          - L_FLT_CTL - Sistema de Flight Control
+                - Cut - Arquivo com os fontes para o corte a laser do painel
+                - Draw - Arquivos para a pintura / gravação dos textos e setas
   - README.md - Este arquivo :-)
 
 
