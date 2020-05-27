@@ -14,10 +14,16 @@ Estrutura dos arquivos:
               - Horizontal - Apoio de fixação na horizontal do botão
               - Vertical - Apoio de fixação da vertical do botão
           - Stickers - Arquivos com os textos que ficam nos botões
+      - Protected - Korrys que são protegidos    
           - Korry_Protected_Base - Base para segurar a capa de proteção do Korry
+          - Korry_Protected_Shield - Capa protetora do Korry
+      - Single_PB - Botões simples que são protegidos
+          - Single_Protected_Base - Base dos botões que são protegidos
+          - Single_Protected_Shield - Capa protetora dos botões protegidos
       - Button List.xlsx - Uma Lista com todos os botões do projeto
  - Eletronics - Arquivos com projetos e esquemeas eletricos e eletrônicos
       - Korry_Circuit - Circuitos que vão ficar atrás dos Korry Buttons
+          - Gerber_Files - Arquivos que podem ser usados direto para a produção das placas em empresas especializadas
  - Images that Help - Alguns prints para ajudar na montagem do projeto
  - old - Coisas do projeto antigo       
  - Panels - Diretório onde ficam os arquivos dos painéis
