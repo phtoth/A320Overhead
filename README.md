@@ -9,6 +9,10 @@ Mudanças - 12/04/2020
 Estrutura dos arquivos:
  - A320 AutoCAD Project - Projeto original do AutoCAD que está sendo modificado
  - Buttons - Projeto 3D dos botões dos painéis
+      - Fire_Button - Botões de Controle de Incêndio
+          - Button_Base - Base do botão que é colada na placa de acrílico
+          - Button_Body - Corpo do Botão de Fire - o que mais demora para imprimir :-(
+          - Button_Plate - Tampa com a inscrição "FIRE - Push"
       - Korry - Botões no estilo Korry
           - Regular - Botões expostos, sem a proteção de acionamento
               - Horizontal - Apoio de fixação na horizontal do botão
@@ -17,8 +21,9 @@ Estrutura dos arquivos:
       - Protected - Korrys que são protegidos    
           - Korry_Protected_Base - Base para segurar a capa de proteção do Korry
           - Korry_Protected_Shield - Capa protetora do Korry
-      - Single_PB - Botões simples que são protegidos
+      - Single_Protected_PB - Botões simples que são protegidos
           - Single_Protected_Base - Base dos botões que são protegidos
+          - Single_Protected_Pin - Pino do botão
           - Single_Protected_Shield - Capa protetora dos botões protegidos
       - Button List.xlsx - Uma Lista com todos os botões do projeto
  - Eletronics - Arquivos com projetos e esquemeas eletricos e eletrônicos
