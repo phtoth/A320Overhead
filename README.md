@@ -13,6 +13,7 @@ Estrutura dos arquivos:
           - Button_Base - Base do botão que é colada na placa de acrílico
           - Button_Body - Corpo do Botão de Fire - o que mais demora para imprimir :-(
           - Button_Plate - Tampa com a inscrição "FIRE - Push"
+          - Button_Extension - Mistakes Happen all the time
       - Korry - Botões no estilo Korry
           - Regular - Botões expostos, sem a proteção de acionamento
               - Horizontal - Apoio de fixação na horizontal do botão
