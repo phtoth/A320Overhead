@@ -101,9 +101,13 @@ Estrutura dos arquivos:
                 - Cut - Arquivo com os fontes para o corte a laser do painel
                 - Draw - Arquivos para a pintura / gravação dos textos e setas
 
+  - Manuais - Documentações importantes
+     - Componentes.md - Lista de componentes usados no projeto
+
   - README.md - Este arquivo :-)
 
 
 Disclaimer: "Este é um projeto open source. Os pontos de vistas aqui apresentados são apenas meus e não foram revistos ou aprovados pela Airbus. Os códigos, prospectos e o projeto com oum todo foram criados por mim. Estes não pertecem e nem foram retirados da Airbus. Eu não falo em nome da Airbus. A marca Airbus A320® e todos os logotipos relacionados são marcas registradas da Airbus SE na França e demais países."
+
 
 Disclaimer: "This is an open source project. The views presented here are only mine and have not been reviewed or approved by Airbus. The codes, prospectuses and the project as a whole were created by me. These do not belong nor have they been withdrawn of Airbus. I don't speak for Airbus. The Airbus A320® brand and all related logos are registered trademarks of Airbus SE in France and other countries."
